@@ -1,231 +1,241 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+// task.scss
 
+// Body container
 .body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(33, 34, 39);
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-}
-
-.task-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 67%;
-    background-color: white;
-    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.main-heading {
+  }
+  
+  // Task container
+  .task-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  // Main heading section
+  .main-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.edit-filter{
-    display: flex;
-    gap: 20px;
-}
-
-.filters{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    .filter-option{
-        padding: 2px;
-        font-size: 14px;
-        border-radius: 5px;
-    }
-}
-
-select{
-    cursor: pointer;
-}
-
-
-.app-heading {
-    font-size: 24px;
+  }
+  
+  // App heading
+  .app-heading {
+    font-size: 32px;
+    font-weight: bold;
     color: #333;
-}
-
-.create-button {
+  }
+  
+  // Edit filter section
+  .edit-filter {
+    display: flex;
+    align-items: center;
+  }
+  
+  // Filters section
+  .filters {
+    margin-right: 20px;
+  }
+  
+  // Filter heading
+  .filter-heading {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  // Filter option select
+  .filter-option {
     padding: 8px 16px;
-    background-color: green;
-    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  // Create button
+  .create-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-}
-
-.task-details {
-    display: flex;
-    justify-content: space-between;
-    background-color: #76ABAE;
-    flex-direction: column;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    min-width: 310px;
-    min-height: 150px;
-}
-
-.options-div{
-    width: 40%;
-    font-size: 14px;
-    border-radius: 5px;
-    margin: 10px;
-    margin-left: 0;
-    padding: 2px;
-    align-self: right;
-    option{
-        padding: 5px;
-    }
-}
-
-.task-title {
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-button:hover {
+    background-color: #0056b3;
+  }
+  
+  // Inputs section
+  .inputs {
+    margin-top: 20px;
+  }
+  
+  // Task title input
+  .task-title {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    border: 2px solid black;
+    margin-bottom: 10px;
     font-size: 16px;
-    transition: box-shadow 0.3s ease;
-}
-
-.task-title:focus,
-.edit-task-title:focus,
-.display-task-title:focus {
-    outline: none; 
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); 
-}
-
-.task-detail-line{
+  }
+  
+  // Deadline component
+  .deadline-component {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.remaining{
+    align-items: center;
+  }
+  
+  // Deadline text
+  .deadline-text {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  // Task date input
+  .task-date {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  // Filtered tasks section
+  .filtered-tasks {
+    margin-top: 20px;
+  }
+  
+  // Task details
+  .task-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  // Edit task title input
+  .edit-task-title {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  // Edit task date input
+  .edit-task-date {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  // Save and cancel buttons section
+  .save-cancel-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  // Save button
+  .save-button,
+  .cancel-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-button {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .save-button:hover,
+  .cancel-button:hover {
+    filter: brightness(90%);
+  }
+  
+  // Task detail line
+  .task-detail-line {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.delete-img{
+  }
+  
+  // Display task title
+  .display-task-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  // Delete image
+  .delete-img {
     width: 20px;
-    cursor: pointer; 
-}
-
-.delete-img:hover{
-    width: 22px;
-}
-
-.task-title:hover {
-    box-shadow: 5px rgba(205, 8, 8, 0.2); 
-}
-
-.edit-task-title {
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.display-task-title{
-    padding: 8px 0;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 550;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.save-button,
-.cancel-button {
-    padding: 6px 12px;
-    margin-right: 8px;
-    background-color: rgb(68, 68, 138);
-    color: white;
-    border: none;
-    width: 70px;
-    border-radius: 5px;
+    height: 20px;
     cursor: pointer;
-    font-size: 14px;
-}
-
-.save-cancel-buttons{
+  }
+  
+  // Date details section
+  .date-details {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
     margin-top: 10px;
-}
-
-.edit-button{
-    padding: 6px 12px;
-    margin-right: 8px;
-    background-color:  rgb(68, 68, 138);
-    color: white;
-    border: none;
-    width: 70px;
-    border-radius: 5px;
-    cursor: pointer;
+  }
+  
+  // Date deadline
+  .date-deadline {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  // Display task date
+  .display-task-date {
     font-size: 14px;
-}
-
-.save-button:hover,
-.cancel-button:hover,
-.edit-button:hover{
-    background-color: rgb(35, 35, 84);
-    cursor: pointer;
-}
-
-.filtered-tasks {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-gap: 30px;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-
-.inputs{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    .task-title{
-        width: 85%;
-    }
-}
-
-.date-details{
-    display: flex;
-    align-items: center;
-    .display-task-date{
-        font-size: 14px;
-        font-weight: 500;
-    }
-}
-
-.task-status{
-    width: 36%;
+    color: #777;
+  }
+  
+  // Remaining section
+  .remaining {
+    margin-top: 10px;
+  }
+  
+  // Task status select
+  .task-status {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.edit-task-date{
-    width: 50%;
-    border-radius: 4px;
-}
+    background-color: #fff;
+    color: #333;
+  }
+  
+  // Edit button
+  .edit-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  

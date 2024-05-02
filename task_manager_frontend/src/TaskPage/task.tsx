@@ -10,32 +10,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const titleRequired=()=>{
-  toast.error('Task Title is required!',{
-    position: "top-right",
-    autoClose: 1500,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: false,
-    draggable: true,
-    theme: "dark",
-    transition: Bounce,
-    }
-  )
+
 }
 
 const dateRequired=()=>{
-  toast.error('Deadline Date is required!',{
-    position: "top-right",
-    autoClose: 1500,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: false,
-    draggable: true,
-    // progress: ,
-    theme: "dark",
-    transition: Bounce,
-    }
-  )
+
 }
 
 
@@ -99,17 +78,7 @@ const TaskList: React.FC = () => {
         setInputValue("");
         setInputDate("");
         const addedTask=()=>{
-          toast.success(`Gear up for ${inputValue} task to accomplish.`, {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-            transition: Bounce,
-            });
+       
             
         }
       addedTask();
@@ -123,17 +92,7 @@ const TaskList: React.FC = () => {
     const taskID = parseInt(id,10);
   try {
     const deletedTask=()=>{
-      toast.info(`You deleted ${taskTitle} task.`, {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Bounce,
-        })
+  
     }
 
     deletedTask();
@@ -163,20 +122,7 @@ const TaskList: React.FC = () => {
         const task = data.getTasks.find(task => task.id === id);
         console.log(task);
 
-        const greetings=()=>{
-          toast(`🎉 Congratulations for Completing your task (${task.taskTitle}) 🎉`, {
-              position: "top-center",
-              autoClose: 4000,
-              hideProgressBar: true,
-              closeOnClick: true,
-              pauseOnHover: false,
-              draggable: true,
-              // progress: ,
-              theme: "light",
-              transition: Bounce,
-            }); 
-          }
-          greetings()
+   
       }
     } catch (error) {
       console.error("Error status change task:", error);

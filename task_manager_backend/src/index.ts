@@ -12,7 +12,11 @@ dotenv.config()
 
 const connectDB = new DataSource({
   type: "postgres",
-  url: process.env.URL,
+  username:"postgres",
+  password:"5799",
+  // url: process.env.URL,
+  database:"NewDB",
+  port:5432,
   logging: true,
   synchronize: true,
   entities: ["./src/entity//*.ts"],
